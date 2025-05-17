@@ -91,7 +91,7 @@ The Docker install process is the best approach for the Raspberry Pi. Note that 
 
 ### Install Docker
 ```bash
-sudo apt install docker
+sudo apt install docker.io
 ```
 
 ### Install and Link Docker Compose to Docker
@@ -115,12 +115,12 @@ mkdir -p ~/.docker/cli-plugins/
 
 Rename the downloaded file
 ```bash
-mv docker-compose-linux-armv6 docker-compose
+mv docker-compose-linux-armv6 ~/.docker/cli-plugins/docker-compose
 ```
 
 Make the file executable:
 ```bash
-chmod +x docker-compose
+chmod +x ~/.docker/cli-plugins/docker-compose
 ```
 
 NOTE: Do not use "apt install docker-compose". This will not work for commands 
@@ -212,6 +212,8 @@ docker ps
 docker exec -it ac-database bash
 mysql -u root -p
 ```
+
+(default password is "password")
 
 ```sql
 show databases;
