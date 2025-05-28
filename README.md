@@ -193,6 +193,9 @@ docker logs for the ac-db-import process with this command:
 docker compose logs -f ac-db-import
 ```
 
+Note: I recently had an issue where during the build process the sql scripts were not getting run completely. I created the file below to help with this:
+https://github.com/mitchellshelton/azerothcore-pi-instructions/blob/main/update-playerbot-sql.sh
+
 ## Set your IP Address Manually
 ```bash
 nmcli con mod "Wired connection 1" ipv4.addresses <your_ip_address>/24
